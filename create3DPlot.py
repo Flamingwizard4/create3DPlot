@@ -20,7 +20,7 @@ def create3DPlot(path):
         print(line)
     '''
 
-    data = [go.Surface(z=depthChange, colorscale='Viridis')]
+    data = [go.Surface(z=depthChange, colorscale='Viridis', cmax=40, cmin=-40)]
 
     layout = go.Layout(
         width=800,
