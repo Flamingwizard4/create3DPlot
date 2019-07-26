@@ -44,7 +44,8 @@ def create3DPlot(path):
                 gridcolor='rgb(255, 255, 255)',
                 zerolinecolor='rgb(255, 255, 255)',
                 showbackground=True,
-                backgroundcolor='rgb(230, 230,230)'
+                backgroundcolor='rgb(230, 230,230)',
+                range = [-40, 40]
             ),
             aspectratio = dict( x=1, y=1, z=0.7 ),
             aspectmode = 'manual'
