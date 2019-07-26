@@ -57,7 +57,9 @@ def create3DPlot(path):
     # IPython notebook
     # py.iplot(fig, filename='pandas-3d-surface', height=700, validate=False)
     
-    #uncomment line below to plot
-    #url = py.iplot(fig, filename='3d-surface-depth-plot3')
+    url = py.iplot(fig, filename='3d-surface-depth-plot3')
+    
+    #This actually returns a IPython.lib.display.IFrame object
+    return url
 
-create3DPlot('/home/username/Downloads/totalHeightChange3.npy')
+#create3DPlot('/home/username/Downloads/totalHeightChange3.npy')
