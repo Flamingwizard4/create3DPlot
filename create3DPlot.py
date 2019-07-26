@@ -10,10 +10,10 @@ from PIL import Image
 def create3DPlot(path):
 
     depthChange = np.load(path)
-    depthChange[depthChange!=depthChange] = 0
+    depthChange[depthChange!=depthChange] = 0 #interpolate dummy
     depthChange = np.array(Image.fromarray(depthChange).resize((224,224), resample= Image.BILINEAR))
     depthChange *= 10
-    depthChange = depthChange.astype('int8')
+    depthChange = depthChange.astype('int8') #see if you can use low precision float
 
     ''' analyzer:
     for line in depthChange:
