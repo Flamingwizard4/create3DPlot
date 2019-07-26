@@ -15,7 +15,7 @@ def create3DPlot(path):
     depthChange *= 10
     depthChange = depthChange.astype('int8')
 
-    ''' analyzer
+    ''' analyzer:
     for line in depthChange:
         print(line)
     '''
@@ -62,4 +62,4 @@ def create3DPlot(path):
     #This actually returns a IPython.lib.display.IFrame object
     return url
 
-#create3DPlot('/home/username/Downloads/totalHeightChange3.npy')
+#create3DPlot('/home/username/Downloads/totalHeightChange.npy')
