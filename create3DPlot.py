@@ -1,10 +1,10 @@
-#these should be imported:
+#these should be imported in DepthProcessor.py:
 import chart_studio.plotly as py
 import plotly.graph_objs as go
 import numpy as np
 from PIL import Image
 
-#this should be in createDataSummary or somewhere
+#this should be in createDataSummary I think..
 ###3D_url = create3DPlot(self.localDepthDirectory + self.totalHeightChange)
 
 def create3DPlot(path):
@@ -20,7 +20,7 @@ def create3DPlot(path):
         print(line)
     '''
 
-    data = [go.Surface(z=depthChange, colorscale='Jet')]
+    data = [go.Surface(z=depthChange, colorscale='Viridis')]
 
     layout = go.Layout(
         width=800,
@@ -55,7 +55,8 @@ def create3DPlot(path):
 
     # IPython notebook
     # py.iplot(fig, filename='pandas-3d-surface', height=700, validate=False)
-
+    
+    #uncomment line below to plot
     #url = py.iplot(fig, filename='3d-surface-depth-plot3')
 
-create3DPlot('/home/jmoorman9/Downloads/totalHeightChange3.npy')
+create3DPlot('/home/username/Downloads/totalHeightChange3.npy')
